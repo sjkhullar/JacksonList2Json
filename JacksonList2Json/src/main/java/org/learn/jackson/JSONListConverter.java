@@ -27,14 +27,14 @@ public class JSONListConverter
     	
     	//1. Convert List Person to JSON
     	String arrayToJson = objectMapper.writeValueAsString(personList);
-    	System.out.println("1. Convert List of person object to JSON :");
+    	System.out.println("1. Convert List of person objects to JSON :");
     	System.out.println(arrayToJson);
     	
     	//2. JSON to Map
     	//Define Custom Type reference for List<Person> type
     	TypeReference<List<Person>> mapType = new TypeReference<List<Person>>() {};
     	List<Person> jsonToPersonList = objectMapper.readValue(arrayToJson, mapType);
-    	System.out.println("\n2. Convert JSON to List of person object :");
+    	System.out.println("\n2. Convert JSON to List of person objects :");
     	
     	//Print list of person objects output using Java 8
     	jsonToPersonList.forEach(System.out::println);
