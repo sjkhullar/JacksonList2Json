@@ -1,0 +1,1 @@
+Convert List of objects to json and json to List of objects using jackson objectmapper
